@@ -14,7 +14,7 @@
     "prepare": "husky install"
   },
   "lint-staged": {
-    "**/*.css": "echo 1",
+    "**/*.css": "npm run css:fix",
     "**/*": "npm run prettier:fix"
   },
   "author": "",
