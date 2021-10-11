@@ -8,12 +8,22 @@
     "css:check": "npx stylelint **/*.css",
     "css:fix": "npx stylelint **/*.css --fix",
     "html:check": "npx html **/*.html",
-    "test": "npm run html:check"
+    "prettier:check": "npx prettier --check .",
+    "prettier:fix": "npx prettier --write .",
+    "test": "npm run html:check",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "**/*.css": "echo 1",
+    "**/*": "npm run prettier:fix"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "htmlhint": "^0.15.2",
+    "husky": "^7.0.2",
+    "lint-staged": "^11.2.3",
+    "prettier": "2.4.1",
     "stylelint": "^13.13.1",
     "stylelint-config-standard": "^22.0.0"
   }
