@@ -5,12 +5,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "css:check": "npx stylelint **/*.css",
+    "css:fix": "npx stylelint **/*.css --fix",
     "html:check": "npx html **/*.html",
     "test": "npm run html:check"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "htmlhint": "^0.15.2"
+    "htmlhint": "^0.15.2",
+    "stylelint": "^13.13.1",
+    "stylelint-config-standard": "^22.0.0"
   }
 }
