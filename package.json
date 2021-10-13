@@ -10,12 +10,12 @@
     "html:check": "npx html **/*.html",
     "prettier:check": "npx prettier --check .",
     "prettier:fix": "npx prettier --write .",
-    "test": "npm run html:check",
+    "test": "npm run prettier:check && npm run html:check && npm run css:check",
     "prepare": "husky install"
   },
   "lint-staged": {
-    "**/*.css": "npm run css:fix",
-    "**/*": "npm run prettier:fix"
+    "**/*": "prettier --write --ignore-unknown",
+    "**/*.css": "npm run css:fix"
   },
   "author": "",
   "license": "ISC",
@@ -25,6 +25,7 @@
     "lint-staged": "^11.2.3",
     "prettier": "2.4.1",
     "stylelint": "^13.13.1",
+    "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-standard": "^22.0.0"
   }
 }
